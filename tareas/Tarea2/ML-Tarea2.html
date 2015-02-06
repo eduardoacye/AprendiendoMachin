@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML:Tarea2</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h1 id="mltarea2-eduardo-acuña-yeomans">ML:Tarea2 - Eduardo Acuña Yeomans</h1>
+
+
+
+<h2 id="1-qué-es-aprendizaje-máquina">1. ¿Qué es aprendizaje máquina?</h2>
+
+
+
+<h4 id="1-qué-tipo-de-aprendizaje-si-aplica-describe-mejor-los-siguientes-problemas">1. ¿Qué tipo de <em>aprendizaje</em> (si aplica) describe mejor los siguientes problemas? :</h4>
+
+<h5 id="a-un-sistema-de-clasificación-automática-de-monedas-para-realizar-el-sistema-los-desarrolladores-obtuvieron-las-especificaciones-exactas-del-banco-de-méxico-sobre-las-monedas-de-1-2-5-y-10-pesos-con-estas-especificaciones-desarrollaron-un-modelo-estadístico-basado-en-el-peso-tamaño-y-denominación">a) Un sistema de clasificación automática de monedas. Para realizar el sistema, los desarrolladores obtuvieron las especificaciones exactas del Banco de México sobre las monedas de <script type="math/tex" id="MathJax-Element-1294">1</script>, <script type="math/tex" id="MathJax-Element-1295">2</script>, <script type="math/tex" id="MathJax-Element-1296">5</script> y <script type="math/tex" id="MathJax-Element-1297">10</script> pesos. Con estas especificaciones desarrollaron un modelo estadístico basado en el peso, tamaño y denominación.</h5>
+
+<blockquote>
+  <p>El <strong>aprendizaje supervisado</strong> sería mejor ya que conocemos el conjunto de clasificaciones.</p>
+</blockquote>
+
+<h5 id="b-para-un-sistema-simple-en-lugar-de-utilizar-las-especificaciones-se-utilizo-un-conjunto-de-monedas-a-las-cuales-se-les-midió-peso-y-tamaño-el-algoritmo-utiliza-esta-información-para-encontrar-umbrales-que-permitan-distinguir-una-moneda-de-otra-de-diferente">b)  Para un sistema simple, en lugar de utilizar las especificaciones, se utilizo un conjunto de monedas a las cuales se les midió peso y tamaño. El algoritmo utiliza esta información para encontrar umbrales que permitan distinguir una moneda de otra de diferente.</h5>
+
+<blockquote>
+  <p>En este caso considero que el mejor es el <strong>aprendizaje no supervisado</strong>, no conocemos que denominaciones hay, pudiera haber o de <span>$</span>1.00, <span>$</span>200, <span>$</span>5.00 o de <span>$</span>5.00, <span>$</span>10.00, <span>$</span>20.00 o incluso monedas chafonas poker o algo así y tendríamos que identificar cuales son los tipos de monedas en el conjunto.</p>
+</blockquote>
+
+<h5 id="c-un-juego-computacional-que-desarrolla-en-forma-independiante-una-estrategia-para-ganar-a-partir-de-jugar-muchas-partidas-en-forma-automática-penalizando-las-partidas-que-pierde">c)  Un juego computacional que desarrolla en forma independiante una estrategia para ganar a partir de jugar muchas partidas en forma automática, penalizando las partidas que pierde.</h5>
+
+<blockquote>
+  <p>En este caso el mejor tipo de aprendizaje es el <strong>aprendizaje por refuerzo</strong> ya que cada partida que juega va mejorando su estrategia la cual es calificada con algun criterio.</p>
+</blockquote>
+
+<h4 id="2-cuales-de-los-siguientes-problemas-la-mejor-forma-de-resolverlos-es-con-aprendizaje-máquina">2.  ¿Cuales de los siguientes problemas, la mejor forma de resolverlos es con <em>aprendizaje máquina</em>?</h4>
+
+<h5 id="a-clasificar-números-en-primos-y-no-primos">a) Clasificar números en primos y no primos.</h5>
+
+<blockquote>
+  <p>No conviene usar aprendizaje máquina, la definición de un número primo es bastante precisa y algoritmos deterministas bastante eficientes se han desarrollado para determinar si un número es primo o no. Además, he leído que no se ha encontrado un patrón en la distribución de números primos en <script type="math/tex" id="MathJax-Element-1372">\mathbb{R}</script>. </p>
+  
+  <p>(Nada mas quería calar como se veían las letras nice con <script type="math/tex" id="MathJax-Element-1373">\LaTeX</script> utilizando markdown)</p>
+</blockquote>
+
+<h5 id="b-detectar-un-probable-fraude-en-una-transacción-bancaria">b) Detectar un probable fraude en una transacción bancaria.</h5>
+
+<blockquote>
+  <p>En este caso se me hace confuso responser, no se como funcionen las transacciones bancarias. Pero me suenta que si las transacciones son un desastre de datos y la inconsistencia en los datos está muy escondida dentro de un mar de información, el aprendizaje máquina pudiera ayudar. Tal vez considerando un conjunto de transacciones no fraudulentas y checar si la transacción en cuestión difiere.</p>
+</blockquote>
+
+<h5 id="c-determinar-el-tiempo-que-le-toma-a-un-objeto-caer-de-una-altura-dada">c) Determinar el tiempo que le toma a un objeto caer de una altura dada.</h5>
+
+<blockquote>
+  <p>No es conveniente utilizar aprendizaje máquina en este caso ya que hay ecuaciones deterministas que se computan con un par de operaciones para medir el tiempo que tarda en caer un objeto. </p>
+</blockquote>
+
+<h5 id="d-determinar-el-ciclo-óptimo-de-encendido-de-semaforos-en-una-intersección-con-mucho-tráfico">d) Determinar el ciclo óptimo de encendido de semaforos en una intersección con mucho tráfico.</h5>
+
+<blockquote>
+  <p>El ciclo óptimo no creo. Un ciclo lo suficientemente bueno: si. Esto lo comento ya hasta donde yo tengo conocimiento el tráfico no solo depende de una intersección, depende de toda una ciudad y del flujo de entrada y salida de automóviles a la ciudad. Además puede que haya cuestiones imprevistas para determinar el comportamiento del tráfico (por ejemplo accidentes o festivales o eventos que modifican el flujo de carros).</p>
+</blockquote>
+
+<h2 id="2-la-desigualdad-de-hoeffding">2. La desigualdad de Hoeffding</h2>
+
+
+
+<h4 id="1-consideremos-una-urna-con-canicas-verdes-y-rojas-de-la-que-no-conozco-la-cantidad-total-de-canicas-pueden-ser-infinitas-la-probabilidad-de-sacar-una-canica-de-color-rojo-es-mu-055-iid-con-remplazo-esta-urna-puede-ser-vista-como-el-conjunto-de-valores-de-x-in-x-y-el-color-es-verde-si-la-hipótesis-escogida-h-tiene-el-mismo-resultado-de-la-función-f-en-este-caso-tenemos-una-hipótesis-cuyo-error-fuera-de-muestra-es-eouth-055-un-clasificador-pero-que-un-volado">1. Consideremos una urna con canicas verdes y rojas, de la que no conozco la cantidad total de canicas (pueden ser infinitas). La probabilidad de sacar una canica de color rojo es <script type="math/tex" id="MathJax-Element-1124">\mu = 0,55</script> (i.i.d., con remplazo). Esta urna puede ser vista como el conjunto de valores de <script type="math/tex" id="MathJax-Element-1125">x \in X</script> y el color es verde si la hipótesis escogida <script type="math/tex" id="MathJax-Element-1126">h</script> tiene el mismo resultado de la función <script type="math/tex" id="MathJax-Element-1127">f</script> . En este caso, tenemos una hipótesis cuyo error fuera de muestra es <script type="math/tex" id="MathJax-Element-1128">E_{out}(h) = 0,55</script>. Un clasificador pero que un volado.</h4>
+
+
+
+<h4 id="consideremos-que-solamente-conocemos-el-valor-de-10-canicas-10-ejemplos-para-entrenamiento">Consideremos que solamente conocemos el valor de <script type="math/tex" id="MathJax-Element-1129">10</script> canicas (<script type="math/tex" id="MathJax-Element-1130">10</script> ejemplos para entrenamiento).</h4>
+
+
+
+<h5 id="1-cuál-es-la-probabilidad-que-nu-0-si-solamente-obtenemos-una-muestra-de-10-canicas-escribe-un-resultado-lo-más-aproximado-posible">1. ¿Cuál es la probabilidad que <script type="math/tex" id="MathJax-Element-1423">\nu = 0</script> si solamente obtenemos una muestra de 10 canicas? Escribe un resultado lo más aproximado posible.</h5>
+
+<blockquote>
+  <p><script type="math/tex" id="MathJax-Element-1424">\nu</script> es la fracción de canicas rojas, es decir, en la muestra hay <script type="math/tex" id="MathJax-Element-1425">0</script> canicas rojas de <script type="math/tex" id="MathJax-Element-1426">10</script> canicas. Esto implica que todas las canicas en la muestra son verdes.</p>
+</blockquote>
+
+<h5 id="2-cuál-es-la-probabilidad-de-encontrar-nu-0-al-menos-una-vez-si-tomamos-una-muestra-aleatoria-de-10-canicas-y-esto-lo-repetimos-1000-veces">2. ¿Cuál es la probabilidad de encontrar <script type="math/tex" id="MathJax-Element-1381">\nu = 0</script> al menos una vez, si tomamos una muestra aleatoria de <script type="math/tex" id="MathJax-Element-1382">10</script> canicas, y esto lo repetimos <script type="math/tex" id="MathJax-Element-1383">1000</script> veces.</h5>
+
+<blockquote>
+  
+</blockquote>
+
+<h2 id="3-el-perceptrón-y-el-error-en-muestra-y-fuera-de-muestra">3. El perceptrón y el error en muestra y fuera de muestra</h2>
+
+
+
+<h4 id="1-para-contestar-las-preguntas-de-esta-sección-es-necesario-realizar-varios-programas-los-cuales-pueden-ser-programados-en-cualquier-lenguaje-de-programación-de-su-elección-los-únicos-lenguajes-de-programación-que-no-se-aceptan-son-brainfuck-y-whitespace">1. Para contestar las preguntas de esta sección es necesario realizar varios programas, los cuales pueden ser programados en cualquier lenguaje de programación de su elección. Los únicos lenguajes de programación que no se aceptan son <code>Brainfuck</code> y <code>Whitespace</code>.</h4>
+
+
+
+<h5 id="1-realiza-una-funcion-que-reciba-tres-parámetros-flotantes-w0-w1-w2-y-dos-valores-x1-y-x2-y-devuelva-el-valor-signw1x1-w2x2-w0">1. Realiza una funcion que reciba tres parámetros flotantes <code>w0</code>, <code>w1</code>, <code>w2</code> y dos valores <code>x1</code> y <code>x2</code>, y devuelva el valor: <script type="math/tex; mode=display" id="MathJax-Element-1135">sign(w_1x_1 + w_2x_2 + w_0)</script></h5>
+
+
+
+<h5 id="2-realiza-una-función-que-genere-dos-pares-de-valores-p1-p11p12-y-p2-p21p22-tal-que-pij-sea-un-número-aleatorio-entre-0-y-1-con-una-distribución-uniforme-el-clasico-rand-de-prácticamente-todos-los-lenguajes-y-encuentre-los-valores-de-w0-w1-y-w2-tales-que-w1p11-w2p12w0-w1p21w2p22w0-0-estos-tres-parámetros-nos-definen-completamente-la-función-f">2. Realiza una función que genere dos pares de valores <script type="math/tex" id="MathJax-Element-1204">p_1 = (p_{1,1},p_{1,2})</script> y <script type="math/tex" id="MathJax-Element-1205">p_2 = (p_{2,1},p_{2,2})</script>, tal que <script type="math/tex" id="MathJax-Element-1206">p_{i,j}</script> sea un número aleatorio entre <script type="math/tex" id="MathJax-Element-1207">0</script> y <script type="math/tex" id="MathJax-Element-1208">1</script> con una distribución uniforme (el clasico <code>rand</code> de prácticamente todos los lenguajes), y encuentre los valores de <script type="math/tex" id="MathJax-Element-1209">w_0</script>, <script type="math/tex" id="MathJax-Element-1210">w_1</script> y <script type="math/tex" id="MathJax-Element-1211">w_2</script> tales que <script type="math/tex; mode=display" id="MathJax-Element-1212">w_1p_{1,1} + w_2p_{1,2}+w_0 = w_1p_{2,1}+w_2p_{2,2}+w_0 = 0</script> Estos tres parámetros nos definen completamente la función <script type="math/tex" id="MathJax-Element-1213">f</script>.</h5>
+
+<h5 id="3-realiza-una-función-que-genere-n-puntos-pi-pi1pi2-donde-cada-pij-es-un-numero-aleatorio-entre-0-y-1-con-distribución-uniforme">3. Realiza una función que genere <script type="math/tex" id="MathJax-Element-1146">N</script> puntos <script type="math/tex" id="MathJax-Element-1147">p_i = (pi,1,pi,2)</script> donde cada <script type="math/tex" id="MathJax-Element-1148">p_{i,j}</script> es un numero aleatorio entre <script type="math/tex" id="MathJax-Element-1149">0</script> y <script type="math/tex" id="MathJax-Element-1150">1</script> con distribución uniforme.</h5>
+
+<blockquote>
+  
+</blockquote>
+
+
+
+<h5 id="4-generaliza-la-función-del-inciso-1-para-asignar-clase-a-cada-uno-de-los-n-puntos-del-inciso-anterior">4. Generaliza la función del inciso 1, para asignar clase a cada uno de los <script type="math/tex" id="MathJax-Element-1151">N</script> puntos del inciso anterior.</h5>
+
+<blockquote>
+  
+</blockquote>
+
+
+
+<h5 id="5-programa-el-algoritmo-del-perceptrón-para-encontrar-g-a-partir-de-los-n-datos-clasificados-encontrar-g-equivale-a-encontrar-los-parámetros-wg0-wg1-wg2-recuerda-que-para-un-conjunto-de-datos-linealmente-separables-el-algoritmo-del-perceptrón-siempre-encuentra-una-solución-g-tal-que-eing-0">5. Programa el algoritmo del perceptrón, para encontrar <script type="math/tex" id="MathJax-Element-1152">g</script> a partir de los <script type="math/tex" id="MathJax-Element-1153">N</script> datos clasificados. Encontrar <script type="math/tex" id="MathJax-Element-1154">g</script> equivale a encontrar los parámetros <script type="math/tex" id="MathJax-Element-1155">wg_0</script>, <script type="math/tex" id="MathJax-Element-1156">wg_1</script>, <script type="math/tex" id="MathJax-Element-1157">wg_2</script>. Recuerda que para un conjunto de datos linealmente separables, el algoritmo del perceptrón siempre encuentra una solución <script type="math/tex" id="MathJax-Element-1158">g</script> tal que <script type="math/tex" id="MathJax-Element-1159">E_{in}(g ) = 0</script>.</h5>
+
+<blockquote>
+  
+</blockquote>
+
+
+
+<h5 id="6-programa-una-función-que-a-partir-de-la-caracterización-de-f-por-medio-de-w0-w1-w2-y-la-caracterización-de-g-con-wg0-wg1-wg2-calcule-eoutg-una-manera-de-estimar-el-error-fuera-de-muestra-es-un-un-metodo-tipo-montecarlo-a-la-fuerza-bruta-para-esto-se-genera-un-número-muy-grande-de-puntos-aleatorios-en-el-plano-unitrio-y-luego-se-calcula-el-porcentaje-de-error-mientras-más-puntos-se-generen-más-preciso-es-el-resultado">6. Programa una función que, a partir de la caracterización de <script type="math/tex" id="MathJax-Element-1160">f</script> por medio de <script type="math/tex" id="MathJax-Element-1161">w_0</script>, <script type="math/tex" id="MathJax-Element-1162">w_1</script>, <script type="math/tex" id="MathJax-Element-1163">w_2</script> y la caracterización de <script type="math/tex" id="MathJax-Element-1164">g</script> con <script type="math/tex" id="MathJax-Element-1165">wg_0</script>, <script type="math/tex" id="MathJax-Element-1166">wg_1</script>, <script type="math/tex" id="MathJax-Element-1167">wg_2</script> calcule <script type="math/tex" id="MathJax-Element-1168">E_{out}(g )</script>. Una manera de estimar el error fuera de muestra es un un metodo tipo Montecarlo, a la fuerza bruta. Para esto, se genera un número muy grande de puntos aleatorios en el plano unitrio, y luego se calcula el porcentaje de error. Mientras más puntos se generen más preciso es el resultado.</h5>
+
+<blockquote>
+  
+</blockquote>
+
+
+
+<h4 id="2-con-estos-programas-desarrollados-y-probados-contesta-las-siguientes-preguntas">2. Con estos programas (desarrollados y probados) contesta las siguientes preguntas:</h4>
+
+
+
+<h5 id="1-cuantas-iteraciones-le-toma-en-promedio-al-algoritmo-del-perceptrón-en-converger-para-diez-valores-en-el-conjunto-de-entrenamiento-n-10-para-tomar-un-número-promedio-de-iteraciones-hay-que-realizar-esto-al-menos-unas-100-veces">1. ¿Cuantas iteraciones le toma en promedio al algoritmo del perceptrón en converger, para diez valores en el conjunto de entrenamiento <script type="math/tex" id="MathJax-Element-1169">N = 10</script>? Para tomar un número promedio de iteraciones hay que realizar esto al menos unas <script type="math/tex" id="MathJax-Element-1170">100</script> veces.</h5>
+
+<blockquote>
+  
+</blockquote>
+
+
+
+<h5 id="2-cual-es-el-valor-de-eoutg-prf-x-6-g-x-para-el-algoritmo-del-perceptrón-con-10-valores-en-el-conjunto-de-aprendizaje-n-10">2. ¿Cual es el valor de <script type="math/tex" id="MathJax-Element-1171">E_{out}(g ) = Pr(f (x) 6= g (x))</script> para el algoritmo del perceptrón con <script type="math/tex" id="MathJax-Element-1172">10</script> valores en el conjunto de aprendizaje (<script type="math/tex" id="MathJax-Element-1173">N = 10</script>).</h5>
+
+<blockquote>
+  
+</blockquote>
+
+
+
+<h5 id="3-cuantas-iteraciones-le-toma-en-promedio-al-algoritmo-del-perceptrón-en-converger-para-cien-valores-en-elconjunto-de-entrenamiento-n-100-para-tomar-un-número-promedio-de-iteraciones-hay-que-realizar-esto-al-menos-unas-100-veces">3. ¿Cuantas iteraciones le toma en promedio al algoritmo del perceptrón en converger, para cien valores en elconjunto de entrenamiento <script type="math/tex" id="MathJax-Element-1174">N = 100</script>? Para tomar un número promedio de iteraciones hay que realizar esto al menos unas <script type="math/tex" id="MathJax-Element-1175">100</script> veces.</h5>
+
+<blockquote>
+  
+</blockquote>
+
+
+
+<h5 id="4-cual-es-el-valor-de-eoutg-prf-x-6-g-x-para-el-algoritmo-del-perceptrón-con-100-valores-en-el-conjunto-de-aprendizaje-n-100">4. ¿Cual es el valor de <script type="math/tex" id="MathJax-Element-1191">E_{out}(g ) = Pr(f (x) 6= g (x))</script> para el algoritmo del perceptrón con <script type="math/tex" id="MathJax-Element-1192">100</script> valores en el conjunto de aprendizaje (<script type="math/tex" id="MathJax-Element-1193">N = 100</script>).</h5>
+
+<blockquote>
+  
+</blockquote></div></body>
+</html>
