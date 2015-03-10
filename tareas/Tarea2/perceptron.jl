@@ -93,7 +93,7 @@ end
 #
 # PERCEPTRON TEST
 #
-xs, ys, f = classified_data(66)
+xs, ys, f = classified_data(1000)
 h, iterations = pla(xs, ys)
 pla_check(ys, perceptron_responses(h, xs))
 pla_plot(xs, ys, h)
