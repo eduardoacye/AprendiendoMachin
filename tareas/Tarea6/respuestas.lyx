@@ -1,0 +1,706 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2.5cm
+\rightmargin 2cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+Tarea 6
+\end_layout
+
+\begin_layout Author
+Eduardo Acuña Yeomans
+\end_layout
+
+\begin_layout Section
+Error de generalización
+\end_layout
+
+\begin_layout Paragraph
+Si imponemos un error máximo de generalización 
+\begin_inset Formula $\epsilon=0.05$
+\end_inset
+
+ y queremos que la cota superior de probabilidad que la generalización sea
+ peor que 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ sea a lo más 
+\begin_inset Formula $0.03$
+\end_inset
+
+, ¿Cuál es el número de ejemplos 
+\begin_inset Formula $N$
+\end_inset
+
+ que se requieren en el caso que
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=1$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+840 ejemplos
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=10$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+1301 ejemplos
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M=100$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+1761 ejemplos
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Punto de quiebre
+\end_layout
+
+\begin_layout Paragraph
+Para un clasificador binario lineal en tres dimensiones, ¿Cuál es el (menor)
+ punto de quiebre?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h(x)=sign(w_{0}+w_{1}x_{1}+w_{2}x_{2}+w_{3}x_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La respuesta a la pregunta es 
+\begin_inset Formula $5$
+\end_inset
+
+, la manera en la que argumento dicha respuesta carece de rigor matemático
+ y se basa mas que nada en ideas e intuiciones sobre los clasificadores
+ lineales.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para determinar que el punto de quiebre es 
+\begin_inset Formula $5$
+\end_inset
+
+ primero demuestro que hay un conjunto de 
+\begin_inset Formula $4$
+\end_inset
+
+ puntos en 
+\begin_inset Formula $\mathbb{{R}}^{3}$
+\end_inset
+
+que pueden ser clasificados con un perceptrón para cualquiera de las posibles
+ 
+\begin_inset Formula $2^{4}$
+\end_inset
+
+ asignaciones.
+ Pudiera dar un ejemplo en concreto e incluso mostrar las diferentes separacione
+s lineales para cada asignación de ese ejemplo, sin embargo voy a construír
+ un argumento que considero lo suficientemente bueno para este ejercicio.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Primero, consideramos el hecho que en dos dimensiones, tres puntos diferentes
+ no colineales son linealmente separables para cualquiera de las 
+\begin_inset Formula $2^{3}$
+\end_inset
+
+asignaciones.
+ Después consideramos el caso de tres puntos diferentes no colineales en
+ tres dimensiones: 
+\begin_inset Formula $p_{1}=(1,0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $p_{2}=(0,1,0)$
+\end_inset
+
+, y 
+\begin_inset Formula $p_{3}=(0,0,1)$
+\end_inset
+
+, estos tres puntos yacen en un plano 
+\begin_inset Formula $P$
+\end_inset
+
+ en el cual podemos trazar rectas que separan cualquier asignación dada.
+ Ahora consideramos un cuarto punto 
+\begin_inset Formula $p_{4}$
+\end_inset
+
+ fuera de 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Para cada una de las 
+\begin_inset Formula $2^{3}$
+\end_inset
+
+asignaciones de 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $p_{3}$
+\end_inset
+
+ hay dos posibles asignaciones para 
+\begin_inset Formula $p_{4}$
+\end_inset
+
+ y al menos una línea recta 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ sobre 
+\begin_inset Formula $P$
+\end_inset
+
+ que separa a los primeros tres puntos para la 
+\begin_inset Formula $i$
+\end_inset
+
+-ésima asignación.
+ Para separar la asignación 
+\begin_inset Formula $i$
+\end_inset
+
+ considerando 
+\begin_inset Formula $p_{4}$
+\end_inset
+
+ tenemos que elegir otro plano 
+\begin_inset Formula $P'_{i}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P\cap P'_{i}=R_{i}$
+\end_inset
+
+ que clasifique a 
+\begin_inset Formula $p_{4}$
+\end_inset
+
+ de manera correcta, ya que 
+\begin_inset Formula $p_{4}$
+\end_inset
+
+ es diferente al resto de los puntos y no es colineal con ni uno de ellos
+ existe un plano 
+\begin_inset Formula $P*_{i}$
+\end_inset
+
+ que contiene a 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ y a 
+\begin_inset Formula $p_{4}$
+\end_inset
+
+.
+ Para conseguir el 
+\begin_inset Formula $P'_{i}$
+\end_inset
+
+ deseado, solo tenemos que rotar 
+\begin_inset Formula $P*_{i}$
+\end_inset
+
+ con 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ como un eje fijo, de tal manera que 
+\begin_inset Formula $p_{4}$
+\end_inset
+
+ quede de un lado o de otro de la clasificación.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para determinar que no se pueden colocar 
+\begin_inset Formula $5$
+\end_inset
+
+ puntos en 
+\begin_inset Formula $\mathbb{{R}}^{3}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $2^{5}$
+\end_inset
+
+ asignaciones pueden ser separables por planos (es decir: el punto de quiebre
+ para 
+\begin_inset Formula $h$
+\end_inset
+
+ es 
+\begin_inset Formula $5$
+\end_inset
+
+), realizamos un procedimiento similar al primer paso pero ahora considerando
+ la colocación de 
+\begin_inset Formula $p_{4}$
+\end_inset
+
+ y 
+\begin_inset Formula $p_{5}$
+\end_inset
+
+ fuera de 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Se realizan todas las posibles asignaciones para los primeros tres puntos
+ y se aborda para cada asignación de los nuevos dos puntos un plano 
+\begin_inset Formula $P''_{i}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P\cap P''_{i}=R_{i}$
+\end_inset
+
+ que clasifique a 
+\begin_inset Formula $p_{4}$
+\end_inset
+
+ y 
+\begin_inset Formula $p_{5}$
+\end_inset
+
+ de manera correcta.
+ Podemos determinar que no existe 
+\begin_inset Formula $P''_{i}$
+\end_inset
+
+ para cada 
+\begin_inset Formula $i\in\{1,\dots,2^{5}\}$
+\end_inset
+
+ ya que la rotación del plano se realiza considerando los primeros tres
+ datos ya clasificados, los puntos de una partición del espacio serán de
+ una clase 
+\begin_inset Formula $k$
+\end_inset
+
+ y la otra partición serán de la otra clase 
+\begin_inset Formula $k^{c}$
+\end_inset
+
+; esto establece una dependencia entre la clasificación de 
+\begin_inset Formula $p_{4}$
+\end_inset
+
+ y la clasificación de 
+\begin_inset Formula $p_{5}$
+\end_inset
+
+, de tal manera que para ni un acomodo de los puntos podremos realizar las
+ 
+\begin_inset Formula $2^{5}$
+\end_inset
+
+ asignaciones.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una manera mas formal de abordar este punto sería demostrar el teorema de
+ Radon: 
+\begin_inset Quotes eld
+\end_inset
+
+Si se toman 
+\begin_inset Formula $d+2$
+\end_inset
+
+ puntos en 
+\begin_inset Formula $\mathbb{{R}}^{d}$
+\end_inset
+
+, se pueden repartir en dos conjuntos disjuntos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ tales que las envolventes convexas de 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ se intersectan
+\begin_inset Quotes erd
+\end_inset
+
+.
+ En este caso, los puntos en conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+ serían los clasificados con la clase 
+\begin_inset Formula $+1$
+\end_inset
+
+ y los puntos en el conjunto 
+\begin_inset Formula $B$
+\end_inset
+
+ serían los clasificados con la clase 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+ Ya que las envolventes convexas se componen de rectas entre los puntos
+ de un conjunto, hablar de que podemos encontrar una manera de repartir
+ los puntos en 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ tal que sus envolventes se intersectan es análogo a decir que hay una asignació
+n de clases de los 
+\begin_inset Formula $d+1$
+\end_inset
+
+ puntos que no pueden ser linealmente separables por el perceptrón.
+\end_layout
+
+\begin_layout Section
+Función de crecimiento
+\end_layout
+
+\begin_layout Paragraph
+Se plantea un algoritmo de parendizaje llamado 2-intervalos, el cual es
+ un conjunto de hipótesis dela forma 
+\begin_inset Formula $h:\mathbb{{R}}\to\{-1,+1\}$
+\end_inset
+
+ de manera que 
+\begin_inset Formula $h(x)=+1$
+\end_inset
+
+ si el valor de 
+\begin_inset Formula $x$
+\end_inset
+
+ se encuentra dentro de alguno de dos intervalos establecidos a partir de
+ cuatro parámetros que definen a 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ En caso contrario 
+\begin_inset Formula $h(x=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es el (menor) punto de quiebre del conjunto de hipótesis?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $5$
+\end_inset
+
+ puntos existe una asignación que no puede encontrar el algoritmo: 1,0,1,0,1.
+ Ya que es la menor cantidad de puntos en donde es necesario tener 
+\begin_inset Formula $3$
+\end_inset
+
+ intervalos .
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cuál sería la función de crecimiento de 
+\begin_inset Formula $m_{\mathcal{{H}}}(N)$
+\end_inset
+
+ para 
+\begin_inset Formula $\mathcal{{H}}$
+\end_inset
+
+ el conjunto de todas las hipótesis posibles del método de 2-intervalos?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El algorítmo de 
+\begin_inset Formula $2$
+\end_inset
+
+-intervalos es mas poderoso que el 
+\begin_inset Formula $1$
+\end_inset
+
+-intervalo, además va a poder clasificar otras asignaciones.
+ La cantidad de nuevas asignaciones admitidas es 
+\begin_inset Formula $C_{4}^{N+1}$
+\end_inset
+
+, por lo tanto 
+\begin_inset Formula $m_{\{\mathcal{H}\}}(N)=C_{4}^{N+1}+C_{2}^{N+1}+1=\frac{N^{4}}{24}-\frac{N^{3}}{12}+\frac{11N^{2}}{24}+\frac{7N}{12}+1$
+\end_inset
+
+ (para 
+\begin_inset Formula $N\geq3)$
+\end_inset
+
+, en otro caso es 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cuál sería el (menor) punto de quiebre 
+\begin_inset Formula $k$
+\end_inset
+
+ para el método de 
+\begin_inset Formula $M$
+\end_inset
+
+-intervalos?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $2\times N+1$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+El método de círculos concéntricos
+\end_layout
+
+\begin_layout Paragraph
+Se considera un método de aprendizaje donde 
+\begin_inset Formula $\mathcal{X}=[-1,1]\times[-1,1]$
+\end_inset
+
+, de manera que 
+\begin_inset Formula $x=(x_{1},x_{2})$
+\end_inset
+
+ es un punto en el plano, donde el valor 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ es el centro.
+ Sea 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ el conjunto de todas las funciones tales que 
+\begin_inset Formula $h(x)=1$
+\end_inset
+
+ cuando 
+\begin_inset Formula $a^{2}\leq x_{1}^{2}+x_{2}^{2}\leq b^{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $h(x)=-1$
+\end_inset
+
+ en otro caso.
+ Cada hipótesis 
+\begin_inset Formula $h$
+\end_inset
+
+ es caracterizada por dos parámetros 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ Calcule la función de crecimiento 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este ejercicio es en donde tengo mas dudas, la solución propuesta se basa
+ en la idea tomar una función 
+\begin_inset Formula $f:\mathbb{R}^{2}\to\mathbb{R}$
+\end_inset
+
+ que transformará cada punto en un valor real, donde 
+\begin_inset Formula $f(x)=\sqrt{x_{1}^{2}+x_{2}^{2}}$
+\end_inset
+
+, considerando esta transformación podemos replantear 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ como el conjunto de todas las funciones tales que 
+\begin_inset Formula $h(x)=1$
+\end_inset
+
+ cuando 
+\begin_inset Formula $a\leq f(x)\leq b$
+\end_inset
+
+ para 
+\begin_inset Formula $0\leq a\leq b$
+\end_inset
+
+ y 
+\begin_inset Formula $h(x)=-1$
+\end_inset
+
+ en otro caso.
+ Este conjunto de hipótesis es muy parecido al de intervalo positivo, por
+ lo tanto estoy casi seguro que la respuesta es que 
+\begin_inset Formula $m_{\mathcal{H}}(N)=C_{2}^{N+1}+1$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
